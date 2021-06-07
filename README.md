@@ -1,5 +1,8 @@
-# Elk-Stack
+# Automated ELK Stack Deployment
 ##  UofU Cyber Security Bootcamp ELK Stack Project
+The files in this repository were used to configure the network depicted below.
+cloudsecurity/https://github.com/sopigogo/Elk-Stack/blob/main/Cloud%20Security.jpg
+
 ### Description of the Topology
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application. By simply logging in to the JumpBox changes and modifications to the different containers and vm's can be deployed from this one single VM. 

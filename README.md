@@ -75,3 +75,30 @@ To launch and expose container with published ports:
 '5601:5601'
 '9200:9200'
 '5044:5044'
+The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
+
+![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
+
+### Target Machines & Beats
+This ELK server is configured to monitor the following machines:  Web-1 : 10.0.0.5, Web-2 : 10.0.0.6 and Web-3 : 10.0.0.7 ; All of these 3 VM's have Filebeat and MetricBeat installed in order to send system logs and audit logs to Kibana allowing a much more efficient monitoring of the servers. For example; FileBeat collects Log Events which  allows us to track recent changes while MetricBeat collects machine metrics such as uptime/
+
+### Using the Playbook
+In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
+
+SSH into the control node and follow the steps below:
+- Copy the YAML file to /etc/ansible
+- Update the /etc/ansible/hosts file to include host, group, private IP address and this    python interpreter: ansible_python_interpreter=/usr/bin/python3
+- Run the playbook, and navigate to curl localhost/setup.php to check that the installation worked as expected.
+The playbooks are listed as
+ install-elk.yml 
+filebeat-playbook.yml 
+metricbeat-playbook.yml. 
+They are copied to the /etc/ansible directory.
+
+In order for the playbook to run on a specific machine the /etc/ansible/hosts need to be updated to reflect the different groups. In this network there are two groups [webservers] [elk] with their respective ip address and python translator.
+Run the playbook and navigate to Kibana with the public ip:5601/app/kibana
+
+
+_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+
+

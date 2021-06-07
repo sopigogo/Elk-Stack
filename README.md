@@ -1,7 +1,7 @@
 # Automated ELK Stack Deployment
 ##  UofU Cyber Security Bootcamp ELK Stack Project
 The files in this repository were used to configure the network depicted below.
-
+![cloudsecurity](https://github.com/sopigogo/Elk-Stack/blob/main/Cloud%20Security.jpg)
 
 ### Description of the Topology
 

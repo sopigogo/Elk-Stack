@@ -3,6 +3,30 @@
 The files in this repository were used to configure the network depicted below.
 ![cloudsecurity](https://github.com/sopigogo/Elk-Stack/blob/main/Cloud%20Security.jpg)
 
+
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above.
+
+
+
+| File Name                              | Description                                                                                                                                                                                                                                                                                               |
+|----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| /etc/ansible/hosts                     | This file already exists in your ansible folder inside of your JumpBox’s container.  It is important to include the private IP addresses of your webservers in this file under [webservers], as well as the private IP address of the ELK server under [elk].  Remove the # in order to activate command. |
+| /etc/ansible/ansible.cfg               | Located at the ansible folder within Docker container. Add private IP addresses of the webservers.                                                                                                                                                                                                        |
+| daemon.json                            | By adding daemon.json within the container the IP address will change in order in order to match the subnet of virtual network.                                                                                                                                                                           |
+| dvwa-playbook.yml                      | The dvwa-playbook.yml is used from the ansible container inside the JumpBox to launch a DVWA container in the vm's being used as webservers.                                                                                                                                                              |
+| /ect/ansible/files/filebeat-config.yml | This is the configuration to FileBeat.                                                                                                                                                                                                                                                                    |
+| filebeat-playbook.yml                  | This playbook install and launches Filebeat shipper in the vulnerable webserver. Filebeat will send logs to ELK for further analysis.                                                                                                                                                                     |
+| stardocker.sh                          | This script will have enable docker to run when the system is started. They will be accessible thru Kibana.                                                                                                                                                                                               |
+| install-elk.yml                        | It is used from the ansible container in JumpBox to install and launch ELK in the ELKVM. Kibana will be accessible from private IP via TCP 5601.                                                                                                                                                          |
+
+This document contains the following details:
+- Description of the Topology
+- Access Policies
+- ELK Configuration
+  - Beats in Use
+  - Machines Being Monitored
+- How to Use the Ansible Build
+
 ### Description of the Topology
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application. By simply logging in to the JumpBox changes and modifications to the different containers and vm's can be deployed from this one single VM. 
@@ -51,14 +75,14 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 
 The playbook implements the following tasks:
 
-Points to a group of machines along to the remote user:
+- Points to a group of machines along to the remote user:
 
 -name: Configure elk VM with Docker
  hosts: elk
  remote_user: sysadmin
  tasks:
 
-Increase System Memory:
+- Increase System Memory:
 
 -name: Use more memory
 systctl:
@@ -67,13 +91,13 @@ systctl:
   state: present
   reload: yes
 
-Installation of following services:
+- Installation of following services:
   
 'docker.io'
 'python3-pip'
 "docker' docker python pip module.
 
-To launch and expose container with published ports:
+- To launch and expose container with published ports:
 
 '5601:5601'
 '9200:9200'

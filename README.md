@@ -1,7 +1,7 @@
 # Automated ELK Stack Deployment
 ##  UofU Cyber Security Bootcamp ELK Stack Project
 The files in this repository were used to configure the network depicted below.
-![cloudsecurity](https://github.com/sopigogo/Elk-Stack/blob/main/Cloud%20Security.jpg)
+![cloudsecurity](https://github.com/sopigogo/Elk-Stack/blob/4ff4871190cd7af4be4dcecafc0cfa7402ed7131/Cloud%20Security.jpg)
 
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above.

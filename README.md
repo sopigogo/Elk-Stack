@@ -125,6 +125,5 @@ In order for the playbook to run on a specific machine the /etc/ansible/hosts ne
 Run the playbook and navigate to Kibana with the public ip:5601/app/kibana
 
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
 
 

@@ -103,7 +103,7 @@ systctl:
 '5044:5044'
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![elkplay](https://github.com/sopigogo/Elk-Stack/blob/main/ELKPLAY%20(3).jpg)
+![elkplay](https://github.com/sopigogo/Elk-Stack/blob/2d81b176250491e4a3c62c1a0a1f4269fd8b7bd6/Diagrams/ELKPLAY%20(3).jpg)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:  Web-1 : 10.0.0.5, Web-2 : 10.0.0.6 and Web-3 : 10.0.0.7 ; All of these 3 VM's have Filebeat and MetricBeat installed in order to send system logs and audit logs to Kibana allowing a much more efficient monitoring of the servers. For example; FileBeat collects Log Events which  allows us to track recent changes while MetricBeat collects machine metrics such as uptime/

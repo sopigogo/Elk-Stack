@@ -124,6 +124,29 @@ They are copied to the /etc/ansible directory.
 In order for the playbook to run on a specific machine the /etc/ansible/hosts need to be updated to reflect the different groups. In this network there are two groups [webservers] [elk] with their respective ip address and python translator.
 Run the playbook and navigate to Kibana with the public ip:5601/app/kibana
 
+Bonus: Commands used to run Ansible for the Elk Server.
+SSH into the JumpBox VM: ssh sysadmin@[publicIP]
+
+Run: sudo docker container list -a
+
+Run: sudo docker start [container name]
+
+Run: sudo docker attach [container name]
+
+Update the hosts file locate @ /etc/ansible/hosts
+
+Write a new Ansible Playbook to configure your ELKVM: curl elk.yml > /etc/ansible/install-elk.yml
+
+Run: ansible-playbook install-elk.yml
+
+To verify that the Docker container is running as expected do the following=> ssh sysadmin@[privateIP] 
+
+Run: sudo docker ps
+
+Open your browser and navigate to=> http://[elkpublicIp]:5601/app/kibana. Remember to create an incoming security rule in your ELK security group that allows TCP traffic from your IP address over to port 5601.
+
+ 
+
 
 
 

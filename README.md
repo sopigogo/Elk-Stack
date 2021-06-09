@@ -1,10 +1,20 @@
-# Automated ELK Stack Deployment
-##  UofU Cyber Security Bootcamp ELK Stack Project
-The files in this repository were used to configure the network depicted below.
+# **Automated ELK Stack Deployment**
+
+## *This is a collection of Linux Scripts and Ansible Scripts that I have been learning from my Cybersecurity Bootcamp. Most of the scripts are use to configure cloud servers with various Docker containers. The final setup was 5 servers running vulnerable DVWA containers along with a Jump Box and a server running an ELK stack container.*
+
+
+
+
+### The files in this repository were used to configure the network depicted below.
+
+
 ![cloudsecurity](https://github.com/sopigogo/Elk-Stack/blob/4ff4871190cd7af4be4dcecafc0cfa7402ed7131/Cloud%20Security.jpg)
 
 
+
+
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above.
+
 
 
 
@@ -25,6 +35,7 @@ This document contains the following details:
   - Beats in Use
   - Machines Being Monitored
 - How to Use the Ansible Build
+
 
 ### Description of the Topology
 
@@ -47,6 +58,7 @@ The configuration details of each machine may be found below.
 | Web-2         | DVWA Server      | 10.0.0.6     | Linux            |
 | Web-3         | DVWA Server      | 10.0.0.7     | Linux            |
 | ELKVM         | ELK Server       | 10.1.0.4     | Linux            |
+
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
@@ -124,7 +136,8 @@ They are copied to the /etc/ansible directory.
 In order for the playbook to run on a specific machine the /etc/ansible/hosts need to be updated to reflect the different groups. In this network there are two groups [webservers] [elk] with their respective ip address and python translator.
 Run the playbook and navigate to Kibana with the public ip:5601/app/kibana
 
-Bonus: Commands used to run Ansible for the Elk Server.
+### Bonus
+Commands used to run Ansible for the Elk Server.
 SSH into the JumpBox VM: ssh sysadmin@[publicIP]
 
 Run: sudo docker container list -a

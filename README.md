@@ -136,7 +136,7 @@ They are copied to the /etc/ansible directory.
 In order for the playbook to run on a specific machine the /etc/ansible/hosts need to be updated to reflect the different groups. In this network there are two groups [webservers] [elk] with their respective ip address and python translator.
 Run the playbook and navigate to Kibana with the public ip:5601/app/kibana
 
-### Bonus
+### Usinf Ansible to setup an Elk server
 Commands used to run Ansible for the Elk Server.
 SSH into the JumpBox VM: ssh sysadmin@[publicIP]
 
